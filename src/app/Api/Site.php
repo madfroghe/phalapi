@@ -30,7 +30,8 @@ class Site extends Api {
 	 */
 	public function index() {
         return array(
-            'title' => 'Hello ' . $this->username,
+            'title' => 'Hello World!',
+            'content' => \PhalApi\T('Hi {name}, welcome to use PhalApi!', array('name' => $this->username)),
             'version' => PHALAPI_VERSION,
             'time' => $_SERVER['REQUEST_TIME'],
         );
